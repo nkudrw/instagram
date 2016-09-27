@@ -16,7 +16,7 @@
               )
 end
 
-n = 1
+n = 4
 while n <= 10
   Blog.create(
     picutre:"8人乗り.jpg",
