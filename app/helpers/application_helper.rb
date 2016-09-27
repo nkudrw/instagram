@@ -9,6 +9,15 @@ module ApplicationHelper
      end
      image_tag(img_url, alt: user.name)
    end
+
+   def insta_img(picture)
+      unless picture.image.blank?
+        img_url = picture.image
+      else
+        img_url = 'no_image.png'
+      end
+      image_tag(img_url)
+    end
 end
 
 

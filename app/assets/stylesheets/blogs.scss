@@ -5,10 +5,14 @@
   margin: 0px auto 74px;
   padding: 20px 20px 20px 35px;
   .row {
+      border-up: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
     padding: 20px;
     text-align: left;
     word-wrap: break-word;
+    background: #FFFFFF;
   }
 }
 input[type="submit"].btn-block{
@@ -17,6 +21,7 @@ input[type="submit"].btn-block{
 
 .container{
   padding-bottom: 85px;
+   background: #FAFAFA;
 }
 
 .page-top-btn {
@@ -42,7 +47,12 @@ input[type="submit"].btn-block{
   }
 }
 
-img{
-    width: 100px;
-    height: 100px;
+.profile{
+    width: 75px;
+    height: 75px;
+}
+
+.picture{
+       width:100%;
+       height:auto;
 }

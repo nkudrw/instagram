@@ -19,7 +19,7 @@ class BlogsController < ApplicationController
    @blog.user_id = current_user.id
     if @blog.save
       # 一覧画面へ遷移して"ブログを作成しました！"とメッセージを表示します。
-      redirect_to blogs_path, notice: "ブログを作成しました！"
+      redirect_to blogs_path, notice: "投稿しました！"
         NoticeMailer.sendmail_blog(@blog).deliver
     else
       # 入力フォームを再描画します。
@@ -33,12 +33,12 @@ class BlogsController < ApplicationController
 
   def update
    @blog.update(blogs_params)
-   redirect_to blogs_path, notice: "ブログを編集しました！"
+   redirect_to blogs_path, notice: "投稿を編集しました！"
   end
 
   def destroy
    @blog.destroy
-   redirect_to blogs_path, notice: "ブログを削除しました！"
+   redirect_to blogs_path, notice: "投稿を削除しました！"
   end
 
   def confirm
@@ -48,7 +48,7 @@ class BlogsController < ApplicationController
 
   private
    def blogs_params
-     params.require(:blog).permit(:title, :content)
+     params.require(:blog).permit(:title, :content,:image)
    end
 
    def set_blog
