@@ -5,8 +5,9 @@
     <div class="row">
         <div class="profile">
       <%= profile_img(blog.user) if profile_img(blog.user) %>
-      <p><%= blog.user.name %><p>
 </div>
+<p><%= blog.user.name %><p>
+    <br>
 <div class="picture">
       <%= image_tag(blog.image ,:width =>"100%" ,:height =>"auto")  %>
   </div>
